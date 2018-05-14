@@ -11,22 +11,36 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: #00FA9A; -fx-border-width: 10; -fx-border-opacity: 10; -fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <VBox prefHeight="365.0" prefWidth="249.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Nome" />
             <TextField />
-            <Label text="Sobrenome" />
+            <Label text="Sobrenome">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Label>
             <TextField />
-            <Label text="CPF" />
+            <Label text="CPF">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Label>
             <TextField />
-            <Label text="RG" />
+            <Label text="RG">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Label>
             <TextField />
-            <Label text="Email" />
+            <Label text="Email">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Label>
             <TextField />
-            <Label text="Senha" />
+            <Label text="Senha">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Label>
             <PasswordField />
             <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -48,10 +62,10 @@
       </VBox>
    </center>
    <left>
-      <Label prefHeight="345.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
+      <Label prefHeight="345.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </left>
    <right>
-      <Label prefHeight="409.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
+      <Label prefHeight="409.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </right>
    <top>
       <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #00FA9A;" BorderPane.alignment="CENTER">
