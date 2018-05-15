@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="250.0" style="-fx-background-color: #00FA9A;">
+         <children>
+            <Label layoutX="59.0" layoutY="107.0" text="Bem-Vindo">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="153.0" opacity="0.74" text="A vara quer raba&#10;q não sei oq, a menina é nova&#10;aquilo lá mesmo&#10;tem q se foder" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="250.0" prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: #EEEEEE;">
+         <children>
+            <Pane layoutY="81.0" prefHeight="247.0" prefWidth="350.0">
+               <children>
+                  <Label layoutX="153.0" layoutY="18.0" text="Login">
+                     <font>
+                        <Font name="Serif Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="75.0" layoutY="64.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="200.0" promptText="E-mail" style="-fx-background-color: #dddddd; -fx-background-radius: 50px;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <PasswordField layoutX="75.0" layoutY="99.0" prefHeight="26.0" prefWidth="200.0" promptText="Senha" style="-fx-background-radius: 50px; -fx-background-color: #dddddd;" />
+                  <Label layoutX="103.0" layoutY="192.0" text="Ainda não possui conta?" />
+                  <Hyperlink layoutX="135.0" layoutY="208.0" text="Inscrever-se" />
+                  <Button layoutX="75.0" layoutY="134.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="200.0" style="-fx-background-color: #00FA9A; -fx-background-radius: 50px;" text="Login" textFill="#575757" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
