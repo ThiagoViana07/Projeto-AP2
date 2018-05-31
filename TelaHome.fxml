@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaHomeController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="106.0" prefWidth="900.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="100.0" prefWidth="125.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <ImageView fitHeight="89.0" fitWidth="95.0" layoutX="17.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagens/logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="125.0" prefHeight="100.0" prefWidth="775.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <TextField fx:id="textFieldBusca" focusTraversable="false" layoutX="23.0" layoutY="38.0" prefHeight="29.0" prefWidth="365.0" promptText="Busca" style="-fx-background-color: transparent; -fx-border-color: #1c1c1c; -fx-border-radius: 15px;">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fitHeight="42.0" fitWidth="61.0" layoutX="394.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagens/busca.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="498.0" layoutY="44.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="132.0" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-radius: 15px;" text="Nome do usuario" />
+                        <ImageView fitHeight="47.0" fitWidth="51.0" layoutX="686.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagens/carrinho.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="609.0" layoutY="73.0" mnemonicParsing="false" onAction="#cadastrarProduto" styleClass="buttonAzul" stylesheets="@../css/myStyle.css" text="Cadastrar Produto" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="500.0" prefWidth="38.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="menu" prefHeight="500.0" prefWidth="230.0" style="-fx-background-color: #1b9392;" visible="false">
+                     <children>
+                        <Label layoutX="69.0" layoutY="6.0" text="Categorias">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="19.0" layoutY="89.0" prefHeight="101.0" prefWidth="211.0" style="-fx-background-color: transparent;">
+                           <children>
+                              <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="26.0" prefWidth="238.0" style="-fx-background-color: transparent;" text="Bebidas">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="238.0" style="-fx-background-color: transparent;" text="Laticinios">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="TOP_LEFT" layoutX="10.0" layoutY="39.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="238.0" style="-fx-background-color: transparent;" text="Limpeza">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <Label layoutX="5.0" layoutY="67.0" text="Alimentos">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="5.0" layoutY="194.0" text="Casa">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="19.0" layoutY="220.0" prefHeight="101.0" prefWidth="211.0" style="-fx-background-color: transparent;">
+                           <children>
+                              <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="26.0" prefWidth="238.0" style="-fx-background-color: transparent;" text="Limpeza">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="TOP_LEFT" layoutX="10.0" layoutY="39.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="238.0" style="-fx-background-color: transparent;" text="Limpeza">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="238.0" style="-fx-background-color: transparent;">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <ImageView fx:id="fecharMenu" fitHeight="25.0" fitWidth="25.0" layoutX="194.0" layoutY="5.0" onMousePressed="#menu" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagens/menu.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fx:id="abrirMenu" fitHeight="25.0" fitWidth="25.0" layoutX="5.0" layoutY="5.0" onMousePressed="#menu" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/menu.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane fx:id="promocoes" prefHeight="439.0" prefWidth="664.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="-193.0" layoutY="52.0" prefHeight="315.0" prefWidth="829.0" style="-fx-background-color: #c1c1c1;">
+                     <children>
+                        <Label layoutX="19.0" layoutY="13.0" text="Promoções">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane hbarPolicy="ALWAYS" hmax="1.1" layoutY="45.0" prefHeight="270.0" prefWidth="830.0" vbarPolicy="NEVER">
+                           <content>
+                              <HBox prefHeight="173.0" prefWidth="1090.0">
+                                 <children>
+                                    <AnchorPane fx:id="heineken" prefHeight="252.0" prefWidth="230.0" style="-fx-border-color: #9C9C9C;">
+                                       <children>
+                                          <ImageView fx:id="h_image" cache="true" fitHeight="28.0" fitWidth="28.0" layoutX="172.0" layoutY="10.0" onMousePressed="#favoritos" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../imagens/heart.png" />
+                                             </image>
+                                          </ImageView>
+                                          <AnchorPane onMouseClicked="#abrirDescricaoProduto" prefHeight="116.0" prefWidth="174.0">
+                                             <children>
+                                                <ImageView fitHeight="105.0" fitWidth="111.0" layoutX="57.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../imagens/cerveja%20heineken.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane fx:id="ancho_pane_adicionar_carrinho" layoutY="204.0" onMouseEntered="#adicionarAoCarrinho" onMouseExited="#adicionarAoCarrinhoSaida" prefHeight="46.0" prefWidth="230.0" styleClass="anchoBackground" stylesheets="@../css/myStyle.css">
+                                             <children>
+                                                <ImageView fx:id="image_carrinho" fitHeight="32.0" fitWidth="37.0" layoutX="189.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../imagens/carrinho.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Button fx:id="btn_adicionar_ao_carrinho" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="185.0" style="-fx-background-color: transparent;" styleClass="buttonAzul" stylesheets="@../css/myStyle.css" text="Adicionar ao carrinho" textFill="#1b9392">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="149.0" prefHeight="50.0" prefWidth="230.0">
+                                             <children>
+                                                <Separator blendMode="EXCLUSION" layoutX="9.0" layoutY="3.0" opacity="0.1" prefHeight="0.0" prefWidth="213.0" />
+                                                <Label layoutX="14.0" layoutY="13.0" prefHeight="35.0" prefWidth="30.0" text="R$" textFill="#1b9392">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="labelPreco" layoutX="32.0" layoutY="10.0" prefHeight="35.0" prefWidth="69.0" text="3,00" textFill="#1b9392">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="4.0" layoutY="105.0" onMouseClicked="#abrirDescricaoProduto" prefHeight="46.0" prefWidth="225.0">
+                                             <children>
+                                                <Label fx:id="labelNome" layoutX="6.0" layoutY="11.0" prefHeight="32.0" prefWidth="186.0" text="Cerveja Heineken 600ml">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <Pane prefHeight="252.0" prefWidth="7.0" style="-fx-background-color: #c1c1c1;" />
+                                    <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="252.0" prefWidth="230.0" style="-fx-border-color: #9C9C9C;">
+                                       <children>
+                                          <AnchorPane prefHeight="149.0" prefWidth="230.0">
+                                             <children>
+                                                <ImageView fitHeight="105.0" fitWidth="111.0" layoutX="57.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../imagens/cerveja%20heineken.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Pane layoutX="190.0" layoutY="8.0" prefHeight="28.0" prefWidth="28.0">
+                                                   <children>
+                                                      <ImageView fx:id="h_image1" cache="true" fitHeight="28.0" fitWidth="28.0" onMousePressed="#favoritos" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../imagens/heart.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane fx:id="ancho_pane_adicionar_carrinho1" layoutY="204.0" onMouseEntered="#adicionarAoCarrinho" onMouseExited="#adicionarAoCarrinhoSaida" prefHeight="46.0" prefWidth="230.0" styleClass="anchoBackground" stylesheets="@../css/myStyle.css">
+                                             <children>
+                                                <ImageView fx:id="image_carrinho1" fitHeight="32.0" fitWidth="37.0" layoutX="189.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../imagens/carrinho.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Button fx:id="btn_adicionar_ao_carrinho1" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="185.0" style="-fx-background-color: transparent;" styleClass="buttonAzul" stylesheets="@../css/myStyle.css" text="Adicionar ao carrinho" textFill="#1b9392">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="149.0" prefHeight="50.0" prefWidth="230.0">
+                                             <children>
+                                                <Separator blendMode="EXCLUSION" layoutX="9.0" layoutY="3.0" opacity="0.1" prefHeight="0.0" prefWidth="213.0" />
+                                                <Label layoutX="14.0" layoutY="13.0" prefHeight="35.0" prefWidth="30.0" text="R$" textFill="#1b9392">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="32.0" layoutY="10.0" prefHeight="35.0" prefWidth="69.0" text="3,00" textFill="#1b9392">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="105.0" prefHeight="46.0" prefWidth="230.0">
+                                             <children>
+                                                <Label layoutX="6.0" layoutY="11.0" prefHeight="32.0" prefWidth="205.0" text="Cerveja Heineken 600ml">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <Pane layoutX="242.0" layoutY="10.0" prefHeight="252.0" prefWidth="7.0" style="-fx-background-color: #c1c1c1;" />
+                                    <AnchorPane layoutX="249.0" layoutY="10.0" prefHeight="252.0" prefWidth="230.0" style="-fx-border-color: #9C9C9C;">
+                                       <children>
+                                          <AnchorPane prefHeight="149.0" prefWidth="230.0">
+                                             <children>
+                                                <ImageView fitHeight="105.0" fitWidth="111.0" layoutX="57.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../imagens/cerveja%20heineken.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Pane layoutX="190.0" layoutY="8.0" prefHeight="28.0" prefWidth="28.0">
+                                                   <children>
+                                                      <ImageView fx:id="h_image2" cache="true" fitHeight="28.0" fitWidth="28.0" onMousePressed="#favoritos" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../imagens/heart.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane fx:id="ancho_pane_adicionar_carrinho2" layoutY="204.0" onMouseEntered="#adicionarAoCarrinho" onMouseExited="#adicionarAoCarrinhoSaida" prefHeight="46.0" prefWidth="230.0" styleClass="anchoBackground" stylesheets="@../css/myStyle.css">
+                                             <children>
+                                                <ImageView fx:id="image_carrinho11" fitHeight="32.0" fitWidth="37.0" layoutX="189.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../imagens/carrinho.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Button fx:id="btn_adicionar_ao_carrinho2" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="185.0" style="-fx-background-color: transparent;" styleClass="buttonAzul" stylesheets="@../css/myStyle.css" text="Adicionar ao carrinho" textFill="#1b9392">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="149.0" prefHeight="50.0" prefWidth="230.0">
+                                             <children>
+                                                <Separator blendMode="EXCLUSION" layoutX="9.0" layoutY="3.0" opacity="0.1" prefHeight="0.0" prefWidth="213.0" />
+                                                <Label layoutX="14.0" layoutY="13.0" prefHeight="35.0" prefWidth="30.0" text="R$" textFill="#1b9392">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="32.0" layoutY="10.0" prefHeight="35.0" prefWidth="69.0" text="3,00" textFill="#1b9392">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="105.0" prefHeight="46.0" prefWidth="230.0">
+                                             <children>
+                                                <Label layoutX="6.0" layoutY="11.0" prefHeight="32.0" prefWidth="205.0" text="Cerveja Heineken 600ml">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <Pane layoutX="481.0" layoutY="10.0" prefHeight="252.0" prefWidth="7.0" style="-fx-background-color: #c1c1c1;" />
+                                    <AnchorPane layoutX="488.0" layoutY="10.0" prefHeight="252.0" prefWidth="230.0" style="-fx-border-color: #9C9C9C;">
+                                       <children>
+                                          <AnchorPane prefHeight="149.0" prefWidth="230.0">
+                                             <children>
+                                                <ImageView fitHeight="105.0" fitWidth="111.0" layoutX="57.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../imagens/cerveja%20heineken.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Pane layoutX="190.0" layoutY="8.0" prefHeight="28.0" prefWidth="28.0">
+                                                   <children>
+                                                      <ImageView fx:id="h_image3" cache="true" fitHeight="28.0" fitWidth="28.0" onMousePressed="#favoritos" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../imagens/heart.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane fx:id="ancho_pane_adicionar_carrinho3" layoutY="204.0" onMouseEntered="#adicionarAoCarrinho" onMouseExited="#adicionarAoCarrinhoSaida" prefHeight="46.0" prefWidth="230.0" styleClass="anchoBackground" stylesheets="@../css/myStyle.css">
+                                             <children>
+                                                <ImageView fx:id="image_carrinho111" fitHeight="32.0" fitWidth="37.0" layoutX="189.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../imagens/carrinho.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Button fx:id="btn_adicionar_ao_carrinho3" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="185.0" style="-fx-background-color: transparent;" styleClass="buttonAzul" stylesheets="@../css/myStyle.css" text="Adicionar ao carrinho" textFill="#1b9392">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="149.0" prefHeight="50.0" prefWidth="230.0">
+                                             <children>
+                                                <Separator blendMode="EXCLUSION" layoutX="9.0" layoutY="3.0" opacity="0.1" prefHeight="0.0" prefWidth="213.0" />
+                                                <Label layoutX="14.0" layoutY="13.0" prefHeight="35.0" prefWidth="30.0" text="R$" textFill="#1b9392">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="32.0" layoutY="10.0" prefHeight="35.0" prefWidth="69.0" text="3,00" textFill="#1b9392">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="105.0" prefHeight="46.0" prefWidth="230.0">
+                                             <children>
+                                                <Label layoutX="6.0" layoutY="11.0" prefHeight="32.0" prefWidth="205.0" text="Cerveja Heineken 600ml">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <Pane layoutX="720.0" layoutY="10.0" prefHeight="252.0" prefWidth="7.0" style="-fx-background-color: #c1c1c1;" />
+                                    <AnchorPane layoutX="727.0" layoutY="10.0" prefHeight="252.0" prefWidth="230.0" style="-fx-border-color: #9C9C9C;">
+                                       <children>
+                                          <AnchorPane prefHeight="149.0" prefWidth="230.0">
+                                             <children>
+                                                <ImageView fitHeight="105.0" fitWidth="111.0" layoutX="57.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../imagens/cerveja%20heineken.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Pane layoutX="190.0" layoutY="8.0" prefHeight="28.0" prefWidth="28.0">
+                                                   <children>
+                                                      <ImageView fx:id="h_image4" cache="true" fitHeight="28.0" fitWidth="28.0" onMousePressed="#favoritos" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../imagens/heart.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane fx:id="ancho_pane_adicionar_carrinho4" layoutY="204.0" onMouseEntered="#adicionarAoCarrinho" onMouseExited="#adicionarAoCarrinhoSaida" prefHeight="46.0" prefWidth="230.0" styleClass="anchoBackground" stylesheets="@../css/myStyle.css">
+                                             <children>
+                                                <ImageView fx:id="image_carrinho1111" fitHeight="32.0" fitWidth="37.0" layoutX="189.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../imagens/carrinho.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Button fx:id="btn_adicionar_ao_carrinho4" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="185.0" style="-fx-background-color: transparent;" styleClass="buttonAzul" stylesheets="@../css/myStyle.css" text="Adicionar ao carrinho" textFill="#1b9392">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="149.0" prefHeight="50.0" prefWidth="230.0">
+                                             <children>
+                                                <Separator blendMode="EXCLUSION" layoutX="9.0" layoutY="3.0" opacity="0.1" prefHeight="0.0" prefWidth="213.0" />
+                                                <Label layoutX="14.0" layoutY="13.0" prefHeight="35.0" prefWidth="30.0" text="R$" textFill="#1b9392">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="32.0" layoutY="10.0" prefHeight="35.0" prefWidth="69.0" text="3,00" textFill="#1b9392">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutY="105.0" prefHeight="46.0" prefWidth="230.0">
+                                             <children>
+                                                <Label layoutX="6.0" layoutY="11.0" prefHeight="32.0" prefWidth="205.0" text="Cerveja Heineken 600ml">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <Pane fx:id="sombra" disable="true" onMouseClicked="#tirarSombra" opacity="0.39" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #000000;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>
