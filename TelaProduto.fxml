@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaProdutoController">
+  <content>
+    <AnchorPane prefHeight="492.0" prefWidth="700.0" styleClass="background" stylesheets="@../css/TelaProduto.css">
+         <children>
+            <AnchorPane prefHeight="320.0" prefWidth="340.0" style="-fx-border-color: #9C9C9C;">
+               <children>
+                  <AnchorPane prefHeight="213.0" prefWidth="337.0">
+                     <children>
+                        <ImageView fitHeight="170.0" fitWidth="246.0" layoutX="71.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagens/cerveja%20heineken.png" />
+                           </image>
+                        </ImageView>
+                        <Pane layoutX="284.0" layoutY="16.0" prefHeight="28.0" prefWidth="28.0">
+                           <children>
+                              <ImageView fx:id="h_image" cache="true" fitHeight="28.0" fitWidth="28.0" onMousePressed="#favoritos" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagens/heart.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="36.0" layoutY="207.0" prefHeight="60.0" prefWidth="260.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="6.0" layoutY="11.0" prefHeight="40.0" prefWidth="238.0" text="Cerveja Heineken 600ml" textFill="#686868">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="ancho_pane_adicionar_carrinho" layoutY="272.0" onMouseClicked="#addFavoritos" onMouseEntered="#passarMouseAdicionarCarrinho" onMouseExited="#passarMouseAdicionarCarrinhoSaida" prefHeight="46.0" prefWidth="338.0" styleClass="anchoBackground" stylesheets="@../css/myStyle.css">
+                     <children>
+                        <ImageView fx:id="image_carrinho" fitHeight="37.0" fitWidth="43.0" layoutX="291.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagens/carrinho.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_adicionar_ao_carrinho" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#addFavoritos" prefHeight="35.0" prefWidth="284.0" style="-fx-background-color: transparent;" styleClass="buttonAzul" stylesheets="@../css/myStyle.css" text="Adicionar ao carrinho" textFill="#1b9392">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="341.0" layoutY="15.0" prefHeight="63.0" prefWidth="329.0">
+               <children>
+                  <Separator blendMode="EXCLUSION" layoutX="10.0" layoutY="54.0" opacity="0.1" prefHeight="0.0" prefWidth="315.0" />
+                  <Label layoutX="14.0" layoutY="21.0" prefHeight="35.0" prefWidth="30.0" text="R$" textFill="#1b9392">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="18.0" prefHeight="35.0" prefWidth="69.0" text="3,00" textFill="#1b9392">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="93.0" layoutY="23.0" prefHeight="35.0" prefWidth="53.0" text="Unidade" textFill="#a1a1a1">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="17.0" layoutY="1.0" prefHeight="24.0" prefWidth="71.0" text="Por apenas" textFill="#a1a1a1">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="354.0" layoutY="81.0" prefHeight="241.0" prefWidth="318.0" styleClass="descricao" stylesheets="@../css/TelaProduto.css">
+               <children>
+                  <Label layoutX="10.0" layoutY="11.0" text="Descrição" textFill="#727272">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Separator blendMode="EXCLUSION" layoutX="2.0" layoutY="31.0" opacity="0.1" prefHeight="0.0" prefWidth="315.0" />
+                  <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="51.0" prefHeight="169.0" prefWidth="295.0" styleClass="descricao" stylesheets="@../css/TelaProduto.css" text="Bebida alcoólica ...pararam  pararaam isso mesmo aquilo lá e pq foi pq foi " textAlignment="JUSTIFY" textFill="#6b6b6b" wrapText="true" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>
